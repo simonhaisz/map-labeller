@@ -1,28 +1,48 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { retrieveMap } from './map-retrieval';
 import './App.css';
+import MapComponent from './Map';
 
-class App extends Component {
+type Props = {};
+type State = {
+  map?: IMap;
+}
+class AppComponent extends Component<Props,State> {
+
+  constructor(props: Props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    retrieveMap("canada")
+      .then(map => {
+        if (map) {
+          this.setState({
+            map
+          });
+        } else {
+          console.error("No map was returned");
+        }
+      })
+      .catch(error => console.error(JSON.stringify(error)));
+  }
+
   render() {
+    if (!this.state.map) {
+      return (
+        <div className="App">Loading map...</div>
+      )
+    }
+    const name = this.state.map.name;
+    const image = this.state.map.image;
+    const regions = this.state.map.regions;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <MapComponent name={name} image={image} regions={regions} />
       </div>
     );
   }
 }
 
-export default App;
+export default AppComponent;
