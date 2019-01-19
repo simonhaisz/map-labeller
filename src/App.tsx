@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { retrieveMap } from './map-retrieval';
 import './App.css';
 import MapComponent from './Map';
 
-type Props = {};
+type Props = {
+  authoring: boolean;
+};
 type State = {
   map?: IMap;
 }
@@ -15,7 +16,7 @@ class AppComponent extends Component<Props,State> {
     this.state = {};
   }
   componentDidMount() {
-    retrieveMap("canada", false)
+    retrieveMap("canada", this.props.authoring)
       .then(map => {
         if (map) {
           this.setState({
@@ -34,12 +35,11 @@ class AppComponent extends Component<Props,State> {
         <div className="App">Loading map...</div>
       )
     }
-    const name = this.state.map.name;
-    const image = this.state.map.image;
-    const regions = this.state.map.regions;
+    const map = this.state.map;
+    const editable = this.props.authoring;
     return (
       <div className="App">
-        <MapComponent name={name} image={image} regions={regions} />
+        <MapComponent map={map} editable={editable} />
       </div>
     );
   }

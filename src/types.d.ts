@@ -6,6 +6,7 @@ interface ILocation {
 interface IRegion {
     name: string;
     location: ILocation;
+    matching?: boolean;
 }
 
 interface IImage {

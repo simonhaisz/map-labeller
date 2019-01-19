@@ -12,12 +12,16 @@ class RegionComponent extends Component<Props> {
     }
 
     render() {
+        const classes: string[] = ["Region"];
+        if (this.props.matching) {
+            classes.push("Region-matching");
+        }
         const style = {
             left: this.props.location.x,
             top: this.props.location.y
         };
         return (
-            <div className="Region" style={style} draggable onDragStart={this.onDragStart}>{this.props.name}</div>
+            <div className={classes.join(" ")} style={style} draggable onDragStart={this.onDragStart}>{this.props.name}</div>
         );
     }
 }
