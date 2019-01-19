@@ -1,4 +1,4 @@
-import React, { Component, DragEvent } from "react";
+import React, { Component, DragEvent, KeyboardEvent, MouseEvent } from "react";
 import "./Map.css";
 import RegionComponent from "./Region";
 
@@ -33,6 +33,16 @@ class MapComponent extends Component<Props, State> {
         }
     }
 
+    onInputKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+
+    }
+
+    onLogMapClick = (e: MouseEvent<HTMLButtonElement>) => {
+        const name = this.props.name;
+        const regions = this.state.regions;
+        console.log(JSON.stringify({name, regions}));
+    }
+
     render() {
         const name = this.props.name;
         const regions = this.state.regions.map(r => (
@@ -46,8 +56,13 @@ class MapComponent extends Component<Props, State> {
         };
         return (
             <div className="Map" style={mapStyle} onDragOver={this.onDragOver} onDrop={this.onDrop}>
-                <div className="Map-name">{name}</div>
-                <div className="Map-regions" >{regions}</div>
+                <div className="Map-header">
+                    <div className="Map-name">{name}</div>
+                    <div className="Map-search-label">Search:</div>
+                    <input className="Map-search-input" type="text" onKeyPress={this.onInputKeyPress} />
+                    <button className="Map-log-button" onClick={this.onLogMapClick}>Log Map</button>
+                </div>
+                <div className="Map-regions">{regions}</div>
             </div>
         );
     }

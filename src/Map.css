@@ -1,3 +1,21 @@
 .Map {
     position: relative;
 }
+
+.Map-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.Map-name {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.Map-search-label {
+    font-size: 16px;
+    line-height: 24px;
+}

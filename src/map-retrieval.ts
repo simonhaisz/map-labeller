@@ -3,19 +3,24 @@ const toBase64 = (buffer: ArrayBuffer): string => {
     return base64;
 };
 
-const retrieveMap = (name: string): Promise<IMap> => {
+const retrieveMap = (name: string, useTemplate: boolean): Promise<IMap> => {
     return new Promise<IMap>((resolve, reject) => {
-        fetch(`/data/${name}.json`)
+        fetch(`/data/${name}-${useTemplate ? "template" : "map"}.json`)
             .then(r => r.json())
             .then(mapData => {
-                fetch(`/data/${name}.png`)
+                fetch(`/data/${name}-image.png`)
                     .then(r => r.arrayBuffer())
                     .then(buffer => {
                         const imageData = toBase64(buffer);
-                        const regions: IRegion[] = mapData.regions.map((r: string, i: number) => ({
-                            name: r,
-                            location: { x: 50, y: 50 + i * 50 }
-                        }));
+                        let regions: IRegion[];
+                        if (useTemplate) {
+                            regions = mapData.regions.map((r: string, i: number) => ({
+                                name: r,
+                                location: { x: 50, y: 50 + i * 50 }
+                            }));
+                        } else {
+                            regions = mapData.regions;
+                        }
                         const map: IMap = {
                             name: mapData.name,
                             image: {

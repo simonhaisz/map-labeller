@@ -15,7 +15,7 @@ class AppComponent extends Component<Props,State> {
     this.state = {};
   }
   componentDidMount() {
-    retrieveMap("canada")
+    retrieveMap("canada", false)
       .then(map => {
         if (map) {
           this.setState({
@@ -25,7 +25,7 @@ class AppComponent extends Component<Props,State> {
           console.error("No map was returned");
         }
       })
-      .catch(error => console.error(JSON.stringify(error)));
+      .catch(error => console.error(error));
   }
 
   render() {
