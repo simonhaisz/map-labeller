@@ -4,6 +4,7 @@ import './App.css';
 import MapComponent from './Map';
 
 type Props = {
+  map:string;
   authoring: boolean;
 };
 type State = {
@@ -16,7 +17,7 @@ class AppComponent extends Component<Props,State> {
     this.state = {};
   }
   componentDidMount() {
-    retrieveMap("canada", this.props.authoring)
+    retrieveMap(this.props.map, this.props.authoring)
       .then(map => {
         if (map) {
           this.setState({

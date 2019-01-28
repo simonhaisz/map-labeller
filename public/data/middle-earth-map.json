@@ -1,0 +1,756 @@
+{
+    "name": "Middle-Earth",
+    "width": 1448,
+    "height": 1024,
+    "regions": [
+        {
+            "name": "Forlindon",
+            "location": {
+                "x": 33,
+                "y": 164
+            }
+        },
+        {
+            "name": "Grey Havens",
+            "location": {
+                "x": 101,
+                "y": 234
+            }
+        },
+        {
+            "name": "Harlindon",
+            "location": {
+                "x": 29,
+                "y": 310
+            }
+        },
+        {
+            "name": "Tower\nHills",
+            "location": {
+                "x": 202,
+                "y": 258
+            }
+        },
+        {
+            "name": "South\nEred Luin",
+            "location": {
+                "x": 250,
+                "y": 301
+            }
+        },
+        {
+            "name": "The Shire",
+            "location": {
+                "x": 276,
+                "y": 224
+            }
+        },
+        {
+            "name": "Ered Luin",
+            "location": {
+                "x": 139,
+                "y": 156
+            }
+        },
+        {
+            "name": "North\nEred Luin",
+            "location": {
+                "x": 174,
+                "y": 95
+            }
+        },
+        {
+            "name": "Evendim",
+            "location": {
+                "x": 238,
+                "y": 130
+            }
+        },
+        {
+            "name": "Arnor",
+            "location": {
+                "x": 304,
+                "y": 42
+            }
+        },
+        {
+            "name": "North Downs",
+            "location": {
+                "x": 330,
+                "y": 123
+            }
+        },
+        {
+            "name": "Buckland",
+            "location": {
+                "x": 333,
+                "y": 191
+            }
+        },
+        {
+            "name": "Bree",
+            "location": {
+                "x": 418,
+                "y": 174
+            }
+        },
+        {
+            "name": "Angmar",
+            "location": {
+                "x": 383,
+                "y": 18
+            }
+        },
+        {
+            "name": "Mount\nGram",
+            "location": {
+                "x": 494,
+                "y": 11
+            }
+        },
+        {
+            "name": "Mount Gundabad",
+            "location": {
+                "x": 610,
+                "y": 19
+            }
+        },
+        {
+            "name": "Ettenmoors",
+            "location": {
+                "x": 444,
+                "y": 97
+            }
+        },
+        {
+            "name": "Weather\nHills",
+            "location": {
+                "x": 477,
+                "y": 162
+            }
+        },
+        {
+            "name": "South\nDowns",
+            "location": {
+                "x": 477,
+                "y": 254
+            }
+        },
+        {
+            "name": "Cardolan",
+            "location": {
+                "x": 378,
+                "y": 341
+            }
+        },
+        {
+            "name": "Minhiriath",
+            "location": {
+                "x": 261,
+                "y": 415
+            }
+        },
+        {
+            "name": "Troll\n-Shaws",
+            "location": {
+                "x": 548,
+                "y": 166
+            }
+        },
+        {
+            "name": "Rivendell",
+            "location": {
+                "x": 619,
+                "y": 138
+            }
+        },
+        {
+            "name": "Fords\nof\nBruinemn",
+            "location": {
+                "x": 561,
+                "y": 223
+            }
+        },
+        {
+            "name": "Hollin",
+            "location": {
+                "x": 546,
+                "y": 321
+            }
+        },
+        {
+            "name": "Moria",
+            "location": {
+                "x": 642,
+                "y": 288
+            }
+        },
+        {
+            "name": "High\nPass",
+            "location": {
+                "x": 640,
+                "y": 205
+            }
+        },
+        {
+            "name": "Goblin\nGate",
+            "location": {
+                "x": 678,
+                "y": 178
+            }
+        },
+        {
+            "name": "Eagle's\nEyrie",
+            "location": {
+                "x": 691,
+                "y": 110
+            }
+        },
+        {
+            "name": "Old\nFord",
+            "location": {
+                "x": 740,
+                "y": 190
+            }
+        },
+        {
+            "name": "Gladden\nFields",
+            "location": {
+                "x": 715,
+                "y": 256
+            }
+        },
+        {
+            "name": "Dimrill\nDale",
+            "location": {
+                "x": 720,
+                "y": 310
+            }
+        },
+        {
+            "name": "Lothlorien",
+            "location": {
+                "x": 667,
+                "y": 371
+            }
+        },
+        {
+            "name": "Darth Celebrant",
+            "location": {
+                "x": 691,
+                "y": 434
+            }
+        },
+        {
+            "name": "Faingorn",
+            "location": {
+                "x": 640,
+                "y": 468
+            }
+        },
+        {
+            "name": "North Dunland",
+            "location": {
+                "x": 505,
+                "y": 389
+            }
+        },
+        {
+            "name": "South Dunland",
+            "location": {
+                "x": 497,
+                "y": 462
+            }
+        },
+        {
+            "name": "Gap\nof\nRohan",
+            "location": {
+                "x": 427,
+                "y": 546
+            }
+        },
+        {
+            "name": "Isengard",
+            "location": {
+                "x": 545,
+                "y": 536
+            }
+        },
+        {
+            "name": "Tharbad",
+            "location": {
+                "x": 405,
+                "y": 427
+            }
+        },
+        {
+            "name": "Enedwaith",
+            "location": {
+                "x": 336,
+                "y": 532
+            }
+        },
+        {
+            "name": "Oruwatih Laur",
+            "location": {
+                "x": 1085,
+                "y": 827
+            }
+        },
+        {
+            "name": "Andrast",
+            "location": {
+                "x": 300,
+                "y": 757
+            }
+        },
+        {
+            "name": "Anfalas",
+            "location": {
+                "x": 467,
+                "y": 744
+            }
+        },
+        {
+            "name": "Erech",
+            "location": {
+                "x": 601,
+                "y": 702
+            }
+        },
+        {
+            "name": "Dol Amrath",
+            "location": {
+                "x": 642,
+                "y": 807
+            }
+        },
+        {
+            "name": "Lamedon",
+            "location": {
+                "x": 721,
+                "y": 713
+            }
+        },
+        {
+            "name": "Pelegir",
+            "location": {
+                "x": 789,
+                "y": 829
+            }
+        },
+        {
+            "name": "Lossarnach",
+            "location": {
+                "x": 805,
+                "y": 757
+            }
+        },
+        {
+            "name": "Minas\nTirith",
+            "location": {
+                "x": 875,
+                "y": 710
+            }
+        },
+        {
+            "name": "Druadan\nForest",
+            "location": {
+                "x": 831,
+                "y": 633
+            }
+        },
+        {
+            "name": "Fords of Isen",
+            "location": {
+                "x": 559,
+                "y": 588
+            }
+        },
+        {
+            "name": "Helms Deep",
+            "location": {
+                "x": 579,
+                "y": 632
+            }
+        },
+        {
+            "name": "Westemnet",
+            "location": {
+                "x": 685,
+                "y": 577
+            }
+        },
+        {
+            "name": "Edoras",
+            "location": {
+                "x": 714,
+                "y": 633
+            }
+        },
+        {
+            "name": "Folde",
+            "location": {
+                "x": 782,
+                "y": 608
+            }
+        },
+        {
+            "name": "Eastemnet",
+            "location": {
+                "x": 751,
+                "y": 508
+            }
+        },
+        {
+            "name": "Carrock",
+            "location": {
+                "x": 758,
+                "y": 98
+            }
+        },
+        {
+            "name": "Rhosgobel",
+            "location": {
+                "x": 100,
+                "y": 100
+            }
+        },
+        {
+            "name": "Northern\nMirkwood",
+            "location": {
+                "x": 824,
+                "y": 83
+            }
+        },
+        {
+            "name": "Withered\nHeath",
+            "location": {
+                "x": 912,
+                "y": 86
+            }
+        },
+        {
+            "name": "Erebor",
+            "location": {
+                "x": 1002,
+                "y": 93
+            }
+        },
+        {
+            "name": "Iron Hills",
+            "location": {
+                "x": 1170,
+                "y": 108
+            }
+        },
+        {
+            "name": "Western\nMirkwood",
+            "location": {
+                "x": 829,
+                "y": 151
+            }
+        },
+        {
+            "name": "Woodland Realm",
+            "location": {
+                "x": 882,
+                "y": 186
+            }
+        },
+        {
+            "name": "Old Forest Road",
+            "location": {
+                "x": 820,
+                "y": 231
+            }
+        },
+        {
+            "name": "Dale",
+            "location": {
+                "x": 1010,
+                "y": 206
+            }
+        },
+        {
+            "name": "Vale of\nCarnen",
+            "location": {
+                "x": 1087,
+                "y": 221
+            }
+        },
+        {
+            "name": "Northern Rhun",
+            "location": {
+                "x": 1261,
+                "y": 208
+            }
+        },
+        {
+            "name": "Eastern\nRhun",
+            "location": {
+                "x": 1316,
+                "y": 287
+            }
+        },
+        {
+            "name": "North\nAnduin\nVale",
+            "location": {
+                "x": 801,
+                "y": 299
+            }
+        },
+        {
+            "name": "Narrow's\nof the\nForest",
+            "location": {
+                "x": 862,
+                "y": 262
+            }
+        },
+        {
+            "name": "Eastern\nMirkwood",
+            "location": {
+                "x": 920,
+                "y": 273
+            }
+        },
+        {
+            "name": "Northern\nRhovanion",
+            "location": {
+                "x": 974,
+                "y": 274
+            }
+        },
+        {
+            "name": "Vale of\nCelduin",
+            "location": {
+                "x": 1072,
+                "y": 290
+            }
+        },
+        {
+            "name": "South\nAnduin\nVale",
+            "location": {
+                "x": 773,
+                "y": 370
+            }
+        },
+        {
+            "name": "Dol Guldor",
+            "location": {
+                "x": 842,
+                "y": 378
+            }
+        },
+        {
+            "name": "Southern\nMirkwood",
+            "location": {
+                "x": 915,
+                "y": 358
+            }
+        },
+        {
+            "name": "Southern\nRhovanion",
+            "location": {
+                "x": 1007,
+                "y": 366
+            }
+        },
+        {
+            "name": "Northern\nDowinion",
+            "location": {
+                "x": 1112,
+                "y": 353
+            }
+        },
+        {
+            "name": "Western\nBrown Land",
+            "location": {
+                "x": 834,
+                "y": 449
+            }
+        },
+        {
+            "name": "Eastern\nBrown Land",
+            "location": {
+                "x": 929,
+                "y": 441
+            }
+        },
+        {
+            "name": "Noman-\nlands",
+            "location": {
+                "x": 1045,
+                "y": 451
+            }
+        },
+        {
+            "name": "Southern\nDowinion",
+            "location": {
+                "x": 1109,
+                "y": 426
+            }
+        },
+        {
+            "name": "Western\nEynim Muir",
+            "location": {
+                "x": 850,
+                "y": 531
+            }
+        },
+        {
+            "name": "Eastern\nEynim Muir",
+            "location": {
+                "x": 955,
+                "y": 506
+            }
+        },
+        {
+            "name": "Dead Marshes",
+            "location": {
+                "x": 901,
+                "y": 588
+            }
+        },
+        {
+            "name": "North\nIthilien",
+            "location": {
+                "x": 982,
+                "y": 634
+            }
+        },
+        {
+            "name": "Dagorland",
+            "location": {
+                "x": 1052,
+                "y": 548
+            }
+        },
+        {
+            "name": "Ash\nMountains",
+            "location": {
+                "x": 1145,
+                "y": 533
+            }
+        },
+        {
+            "name": "South\nRhun",
+            "location": {
+                "x": 1292,
+                "y": 451
+            }
+        },
+        {
+            "name": "Khand",
+            "location": {
+                "x": 1297,
+                "y": 550
+            }
+        },
+        {
+            "name": "South\nIthilien",
+            "location": {
+                "x": 982,
+                "y": 776
+            }
+        },
+        {
+            "name": "West Haronder",
+            "location": {
+                "x": 803,
+                "y": 910
+            }
+        },
+        {
+            "name": "East\nHaronder",
+            "location": {
+                "x": 946,
+                "y": 883
+            }
+        },
+        {
+            "name": "Umbar",
+            "location": {
+                "x": 794,
+                "y": 993
+            }
+        },
+        {
+            "name": "Near Farad",
+            "location": {
+                "x": 1020,
+                "y": 961
+            }
+        },
+        {
+            "name": "Far Harad",
+            "location": {
+                "x": 1246,
+                "y": 957
+            }
+        },
+        {
+            "name": "Haradwaith",
+            "location": {
+                "x": 1275,
+                "y": 873
+            }
+        },
+        {
+            "name": "Morannon",
+            "location": {
+                "x": 1056,
+                "y": 625
+            }
+        },
+        {
+            "name": "Minas\nMorgul",
+            "location": {
+                "x": 1039,
+                "y": 704
+            }
+        },
+        {
+            "name": "Cirith\nUnaol",
+            "location": {
+                "x": 1091,
+                "y": 707
+            }
+        },
+        {
+            "name": "Gorgoroth",
+            "location": {
+                "x": 1130,
+                "y": 769
+            }
+        },
+        {
+            "name": "Barad Dur",
+            "location": {
+                "x": 1192,
+                "y": 626
+            }
+        },
+        {
+            "name": "Nurn",
+            "location": {
+                "x": 1342,
+                "y": 782
+            }
+        },
+        {
+            "name": "Old Forest",
+            "location": {
+                "x": 346,
+                "y": 278
+            }
+        },
+        {
+            "name": "Osgiliath",
+            "location": {
+                "x": 887,
+                "y": 792
+            }
+        }
+    ]
+}

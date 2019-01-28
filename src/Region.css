@@ -1,11 +1,18 @@
 .Region {
     position: absolute;
-    cursor: pointer;
-    border: 4px solid black;
+    cursor: default;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: lightgray;
+    color: white;
     padding: 5px;
+    font-size: 8px;
+    font-weight: bold;
 }
 
 .Region.Region-matching {
-    border-color: red;
-    color: red;
+    border-width: 2px;
+    border-color: dodgerblue;
+    color: deepskyblue;
 }

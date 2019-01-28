@@ -16,6 +16,7 @@ interface IImage {
 }
 
 interface IMap {
+    id: string;
     name: string;
     image: IImage;
     regions: IRegion[];

@@ -1,6 +1,7 @@
 import React, { Component, DragEvent, KeyboardEvent, MouseEvent, ChangeEvent } from "react";
 import "./Map.css";
 import RegionComponent from "./Region";
+import { saveMap } from "./map-retrieval";
 
 type Props = {
     map: IMap;
@@ -76,20 +77,21 @@ class MapComponent extends Component<Props, State> {
         }
     }
 
-    onLogMapClick = (e: MouseEvent<HTMLButtonElement>) => {
-        const name = this.props.map.name;
-        const regions = this.state.regions;
-        console.log(JSON.stringify({name, regions}));
+    onLogMapClick = (e: MouseEvent<HTMLDivElement>) => {
+        const map: IMap = {...this.props.map, regions: [...this.state.regions]};
+        saveMap(map);
     }
 
     render() {
-        const editable = this.props.editable;
+        const editable = true//this.props.editable;
         const name = this.props.map.name;
-        const regions = this.state.regions.map(r => (
-            <RegionComponent name={r.name} location={r.location} matching={r.matching} key={r.name}/>
-        ));
-        const matches = this.state.matches.map(m => (
-            <button className="Map-search-match-button" onClick={() => this.onMatchClick(m)} key={m}>{m}</button>
+        const regions = this.state.regions.map((r, i) => {
+            return (
+                <RegionComponent name={r.name} location={r.location} matching={r.matching} draggable={editable} key={i}/>
+            )
+        });
+        const matches = this.state.matches.map((m, i) => (
+            <div className="Map-search-match-button" onClick={() => this.onMatchClick(m)} key={i}>{m}</div>
         ));
         const mapStyle = {
             backgroundImage: `url(data:image/png;base64,${this.props.map.image.data})`,
@@ -101,9 +103,11 @@ class MapComponent extends Component<Props, State> {
             <div className="Map" style={mapStyle} onDragOver={this.onDragOver} onDrop={this.onDrop}>
                 <div className="Map-header">
                     <div className="Map-name">{name}</div>
-                    <div className="Map-search-label">Search:</div>
-                    <input className="Map-search-input" type="text" onChange={this.onSearchChange} onKeyPress={this.onSearchKeyPress} />
-                    {editable ? <button className="Map-log-button" onClick={this.onLogMapClick}>Log Map</button> : null}
+                    <div className="Map-search">
+                        <div className="Map-search-label">Search:</div>
+                        <input className="Map-search-input" type="text" onChange={this.onSearchChange} onKeyPress={this.onSearchKeyPress} />
+                    </div>
+                    {editable ? <div className="Map-log-button" onClick={this.onLogMapClick}>Save Map</div> : null}
                     {matches}
                 </div>
                 <div className="Map-regions">{regions}</div>

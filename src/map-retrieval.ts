@@ -3,9 +3,11 @@ const toBase64 = (buffer: ArrayBuffer): string => {
     return base64;
 };
 
-const retrieveMap = (name: string, useTemplate: boolean): Promise<IMap> => {
+const retrieveMap = (name: string, useTemplate: boolean = false): Promise<IMap> => {
     return new Promise<IMap>((resolve, reject) => {
-        fetch(`/data/${name}-${useTemplate ? "template" : "map"}.json`)
+        const publicUrl = `/data/${name}-${useTemplate ? "template" : "map"}.json`;
+        const privateUrl = `http://localhost:8080/maps/${name}`;
+        fetch(privateUrl)
             .then(r => r.json())
             .then(mapData => {
                 fetch(`/data/${name}-image.png`)
@@ -22,11 +24,12 @@ const retrieveMap = (name: string, useTemplate: boolean): Promise<IMap> => {
                             regions = mapData.regions;
                         }
                         const map: IMap = {
+                            id: mapData.id,
                             name: mapData.name,
                             image: {
                                 data: imageData,
-                                width: 2124,
-                                height: 1754
+                                width: mapData.width,
+                                height: mapData.height
                             },
                             regions
                         };
@@ -39,6 +42,23 @@ const retrieveMap = (name: string, useTemplate: boolean): Promise<IMap> => {
     });
 };
 
+const saveMap = (map: IMap): Promise<void> => {
+    return new Promise<void>((resolve, reject) => {
+        const privateUrl = `http://localhost:8080/maps/${map.id}`;
+        fetch(privateUrl, {
+            method: "PATCH",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(map)
+        })
+        .then(res => resolve())
+        .catch(err => reject(err));
+    })
+}
+
 export {
-    retrieveMap
+    retrieveMap,
+    saveMap
 }
