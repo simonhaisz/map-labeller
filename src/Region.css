@@ -16,3 +16,9 @@
     border-color: dodgerblue;
     color: deepskyblue;
 }
+
+.Region.Region-selected {
+    border-width: 2px;
+    border-color: teal;
+    color: mediumturquoise;
+}

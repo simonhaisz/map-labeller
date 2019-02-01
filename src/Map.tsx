@@ -1,7 +1,8 @@
 import React, { Component, DragEvent, KeyboardEvent, MouseEvent, ChangeEvent } from "react";
 import "./Map.css";
-import RegionComponent from "./Region";
+import RegionComponent, { convertNameToId } from "./Region";
 import { saveMap } from "./map-retrieval";
+import SearchResults from "./SearchResults";
 
 type Props = {
     map: IMap;
@@ -58,41 +59,54 @@ class MapComponent extends Component<Props, State> {
                 .map(r => r.name);
         }
         const regions = [...this.state.regions];
-        regions.forEach(r => r.matching = matches.includes(r.name));
+        regions.forEach(r => {
+            r.selected = false;
+            r.matching = matches.includes(r.name);
+        });
         this.setState({ matches, regions });
-    }
-
-    onMatchClick = (match: string) => {
-        const result = this.state.regions.find(r => r.name === match);
-        if (result) {
-            let x = result.location.x;
-            if (x < screen.width / 2) {
-                x = 0;
-            }
-            let y = result.location.y;
-            if (y < screen.height / 2) {
-                y = 0;
-            }
-            scrollTo(x, y);
+        if (matches.length > 0) {
+            this.onMatchClick(matches[0]);
         }
     }
 
-    onLogMapClick = (e: MouseEvent<HTMLDivElement>) => {
+    onMatchClick = (match: string) => {
+        const region = this.state.regions.find(r => r.name === match);
+        const regions = [...this.state.regions];
+        regions.forEach(r => r.selected = r.name === match);
+        this.setState(state => ({...state, regions }));
+        if (region) {
+            const windowMiddleX = window.innerWidth / 2;
+            const windowMiddleY = window.innerHeight / 2;
+            const regionDiv = document.getElementById(convertNameToId(region.name));
+            if (!regionDiv) {
+                throw new Error(`Could not find region '${region.name}'`);
+            }
+            const regionMiddleX = regionDiv.offsetWidth / 2;
+            const regionMiddleY = regionDiv.offsetHeight / 2;
+            let x = region.location.x + regionMiddleX - windowMiddleX;
+            let y = region.location.y + regionMiddleY - windowMiddleY;
+            const options: ScrollToOptions = {
+                top: y,
+                left: x,
+                behavior: "smooth"
+            }
+            scrollTo(options);
+        }
+    }
+
+    onSaveMapClick = (e: MouseEvent<HTMLDivElement>) => {
         const map: IMap = {...this.props.map, regions: [...this.state.regions]};
         saveMap(map);
     }
 
     render() {
-        const editable = true//this.props.editable;
+        const editable = this.props.editable;
         const name = this.props.map.name;
         const regions = this.state.regions.map((r, i) => {
             return (
-                <RegionComponent name={r.name} location={r.location} matching={r.matching} draggable={editable} key={i}/>
+                <RegionComponent name={r.name} location={r.location} matching={!!r.matching} selected={!!r.selected} draggable={editable} key={i}/>
             )
         });
-        const matches = this.state.matches.map((m, i) => (
-            <div className="Map-search-match-button" onClick={() => this.onMatchClick(m)} key={i}>{m}</div>
-        ));
         const mapStyle = {
             backgroundImage: `url(data:image/png;base64,${this.props.map.image.data})`,
             width: this.props.map.image.width,
@@ -107,8 +121,16 @@ class MapComponent extends Component<Props, State> {
                         <div className="Map-search-label">Search:</div>
                         <input className="Map-search-input" type="text" onChange={this.onSearchChange} onKeyPress={this.onSearchKeyPress} />
                     </div>
-                    {editable ? <div className="Map-log-button" onClick={this.onLogMapClick}>Save Map</div> : null}
-                    {matches}
+                    {
+                        editable
+                        ?
+                        <div className="Map-log-button" onClick={this.onSaveMapClick}>Save Map</div>
+                        :
+                        this.state.matches.length > 0 ?
+                            <SearchResults matches={this.state.matches} selectMatch={this.onMatchClick} />
+                            :
+                            null
+                    }
                 </div>
                 <div className="Map-regions">{regions}</div>
             </div>

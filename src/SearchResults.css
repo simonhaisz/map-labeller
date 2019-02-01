@@ -1,0 +1,33 @@
+.SearchResults {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: space-between;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    background-color: dimgrey;
+    color: lightgray;
+    cursor: default;
+}
+
+.SearchResults-selected {
+    font-size: 10px;
+    width: 138px;
+}
+
+.SearchResults-selected:hover {
+    color: white;
+}
+
+.SearchResults-next-button,.SearchResults-previous-button {
+    font-size: 10px;
+    width: 10px;
+    padding: 2px;
+    line-height: 10px;
+}
+
+.SearchResults-next-button:hover,.SearchResults-previous-button:hover {
+    color: white;
+}

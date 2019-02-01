@@ -7,6 +7,7 @@ interface IRegion {
     name: string;
     location: ILocation;
     matching?: boolean;
+    selected?: boolean;
 }
 
 interface IImage {
