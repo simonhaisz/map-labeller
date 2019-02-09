@@ -13,8 +13,11 @@
 }
 
 .SearchResults-selected {
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
     width: 138px;
+    padding: 2px;
 }
 
 .SearchResults-selected:hover {
@@ -22,10 +25,11 @@
 }
 
 .SearchResults-next-button,.SearchResults-previous-button {
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
     width: 10px;
-    padding: 2px;
-    line-height: 10px;
+    padding: 4px;
 }
 
 .SearchResults-next-button:hover,.SearchResults-previous-button:hover {
