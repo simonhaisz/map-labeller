@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/map-labeller/precache-manifest.8f95f95b0ee317e52d502b15cd7bf7c4.js"
+  "/map-labeller/precache-manifest.061053d61ba062af9217187678cc81c7.js"
 );
 
 workbox.clientsClaim();

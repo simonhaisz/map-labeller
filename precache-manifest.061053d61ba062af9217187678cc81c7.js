@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c78f9084614587858b7a",
+    "revision": "05d471ac360b5686d2d0",
     "url": "/map-labeller/static/css/main.4e02741e.chunk.css"
   },
   {
-    "revision": "c78f9084614587858b7a",
-    "url": "/map-labeller/static/js/main.c78f9084.chunk.js"
+    "revision": "05d471ac360b5686d2d0",
+    "url": "/map-labeller/static/js/main.05d471ac.chunk.js"
   },
   {
     "revision": "2ff7d33ae469ca6408be",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/map-labeller/static/js/runtime~main.23bd0655.js"
   },
   {
-    "revision": "2401bf6a8e55bfbcd7165649a3a35591",
+    "revision": "9829a8ee8aa1a7ab62b13b78168e9621",
     "url": "/map-labeller/index.html"
   }
 ];
