@@ -1,13 +1,13 @@
 {
-  "main.css": "/map-labeller/static/css/main.4e02741e.chunk.css",
-  "main.js": "/map-labeller/static/js/main.a090d4cc.chunk.js",
-  "main.js.map": "/map-labeller/static/js/main.a090d4cc.chunk.js.map",
-  "static/js/1.2ff7d33a.chunk.js": "/map-labeller/static/js/1.2ff7d33a.chunk.js",
-  "static/js/1.2ff7d33a.chunk.js.map": "/map-labeller/static/js/1.2ff7d33a.chunk.js.map",
-  "runtime~main.js": "/map-labeller/static/js/runtime~main.23bd0655.js",
-  "runtime~main.js.map": "/map-labeller/static/js/runtime~main.23bd0655.js.map",
-  "static/css/main.4e02741e.chunk.css.map": "/map-labeller/static/css/main.4e02741e.chunk.css.map",
-  "index.html": "/map-labeller/index.html",
-  "precache-manifest.4717700e59d2f994f6021618d1d46c1d.js": "/map-labeller/precache-manifest.4717700e59d2f994f6021618d1d46c1d.js",
-  "service-worker.js": "/map-labeller/service-worker.js"
+  "main.css": "/middle-earth/static/css/main.4e02741e.chunk.css",
+  "main.js": "/middle-earth/static/js/main.a513e6fc.chunk.js",
+  "main.js.map": "/middle-earth/static/js/main.a513e6fc.chunk.js.map",
+  "static/js/1.2ff7d33a.chunk.js": "/middle-earth/static/js/1.2ff7d33a.chunk.js",
+  "static/js/1.2ff7d33a.chunk.js.map": "/middle-earth/static/js/1.2ff7d33a.chunk.js.map",
+  "runtime~main.js": "/middle-earth/static/js/runtime~main.2b06e1c6.js",
+  "runtime~main.js.map": "/middle-earth/static/js/runtime~main.2b06e1c6.js.map",
+  "static/css/main.4e02741e.chunk.css.map": "/middle-earth/static/css/main.4e02741e.chunk.css.map",
+  "index.html": "/middle-earth/index.html",
+  "precache-manifest.de39ae87180b02bd07722b1b2047ce55.js": "/middle-earth/precache-manifest.de39ae87180b02bd07722b1b2047ce55.js",
+  "service-worker.js": "/middle-earth/service-worker.js"
 }
