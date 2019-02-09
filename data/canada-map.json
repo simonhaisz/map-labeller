@@ -1,0 +1,98 @@
+{
+    "name": "Canada",
+    "width": 2124,
+    "height": 1754,
+    "regions": [
+        {
+            "name": "British Columbia",
+            "location": {
+                "x": 266,
+                "y": 252
+            }
+        },
+        {
+            "name": "Alberta",
+            "location": {
+                "x": 180,
+                "y": 249
+            }
+        },
+        {
+            "name": "Saskatchewan",
+            "location": {
+                "x": 1532,
+                "y": 258
+            }
+        },
+        {
+            "name": "Manitoba",
+            "location": {
+                "x": 419,
+                "y": 252
+            }
+        },
+        {
+            "name": "Ontario",
+            "location": {
+                "x": 1177,
+                "y": 252
+            }
+        },
+        {
+            "name": "Quebec",
+            "location": {
+                "x": 1443,
+                "y": 257
+            }
+        },
+        {
+            "name": "New Brunswick",
+            "location": {
+                "x": 514,
+                "y": 253
+            }
+        },
+        {
+            "name": "Nova Scotia",
+            "location": {
+                "x": 977,
+                "y": 253
+            }
+        },
+        {
+            "name": "Prince Edward Island",
+            "location": {
+                "x": 1258,
+                "y": 254
+            }
+        },
+        {
+            "name": "Newfoundland",
+            "location": {
+                "x": 658,
+                "y": 255
+            }
+        },
+        {
+            "name": "Yukon",
+            "location": {
+                "x": 1670,
+                "y": 258
+            }
+        },
+        {
+            "name": "North West Territories",
+            "location": {
+                "x": 790,
+                "y": 253
+            }
+        },
+        {
+            "name": "Nunavut",
+            "location": {
+                "x": 1091,
+                "y": 255
+            }
+        }
+    ]
+}

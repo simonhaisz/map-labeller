@@ -1,0 +1,20 @@
+{
+    "name": "Canada",
+    "width": 2124,
+    "height": 1754,
+    "regions": [
+        "British Columbia",
+        "Alberta",
+        "Saskatchewan",
+        "Manitoba",
+        "Ontario",
+        "Quebec",
+        "New Brunswick",
+        "Nova Scotia",
+        "Prince Edward Island",
+        "Newfoundland",
+        "Yukon",
+        "North West Territories",
+        "Nunavut"
+    ]
+}
