@@ -124,12 +124,13 @@ class MapComponent extends Component<Props, State> {
                     {
                         editable
                         ?
-                        <div className="Map-log-button" onClick={this.onSaveMapClick}>Save Map</div>
+                            <div className="Map-log-button" onClick={this.onSaveMapClick}>Save Map</div>
                         :
-                        this.state.matches.length > 0 ?
-                            <SearchResults matches={this.state.matches} selectMatch={this.onMatchClick} />
+                            this.state.matches.length > 0
+                            ?
+                                <SearchResults matches={this.state.matches} selectMatch={this.onMatchClick} />
                             :
-                            null
+                                null
                     }
                 </div>
                 <div className="Map-regions">{regions}</div>
