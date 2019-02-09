@@ -2,7 +2,7 @@
   "name": "map-labeller",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://simonhaisz.github.io/map-labeller/",
+  "homepage": "https://simonhaisz.github.io/middle-earth/",
   "dependencies": {
     "@types/jest": "23.3.12",
     "@types/node": "10.12.18",
