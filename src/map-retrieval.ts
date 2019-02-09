@@ -7,7 +7,7 @@ const retrieveMap = (name: string, useTemplate: boolean = false): Promise<IMap> 
     return new Promise<IMap>((resolve, reject) => {
         const publicUrl = `/data/${name}-${useTemplate ? "template" : "map"}.json`;
         const privateUrl = `http://localhost:8080/maps/${name}`;
-        fetch(privateUrl)
+        fetch(publicUrl)
             .then(r => r.json())
             .then(mapData => {
                 fetch(`/data/${name}-image.png`)
