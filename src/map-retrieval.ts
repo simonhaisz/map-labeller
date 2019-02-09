@@ -5,7 +5,7 @@ const toBase64 = (buffer: ArrayBuffer): string => {
 
 const retrieveMap = (name: string, useTemplate: boolean = false): Promise<IMap> => {
     return new Promise<IMap>((resolve, reject) => {
-        const publicUrl = `map-labeller/data/${name}-${useTemplate ? "template" : "map"}.json`;
+        const publicUrl = `data/${name}-${useTemplate ? "template" : "map"}.json`;
         const privateUrl = `http://localhost:8080/maps/${name}`;
         fetch(publicUrl)
             .then(r => r.json())
