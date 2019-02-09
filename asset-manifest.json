@@ -1,13 +1,13 @@
 {
-  "main.css": "/map-labeller/static/css/main.4e02741e.chunk.css",
-  "main.js": "/map-labeller/static/js/main.a090d4cc.chunk.js",
-  "main.js.map": "/map-labeller/static/js/main.a090d4cc.chunk.js.map",
+  "main.css": "/map-labeller/static/css/main.78a17ef2.chunk.css",
+  "main.js": "/map-labeller/static/js/main.aeb243f2.chunk.js",
+  "main.js.map": "/map-labeller/static/js/main.aeb243f2.chunk.js.map",
   "static/js/1.2ff7d33a.chunk.js": "/map-labeller/static/js/1.2ff7d33a.chunk.js",
   "static/js/1.2ff7d33a.chunk.js.map": "/map-labeller/static/js/1.2ff7d33a.chunk.js.map",
   "runtime~main.js": "/map-labeller/static/js/runtime~main.23bd0655.js",
   "runtime~main.js.map": "/map-labeller/static/js/runtime~main.23bd0655.js.map",
-  "static/css/main.4e02741e.chunk.css.map": "/map-labeller/static/css/main.4e02741e.chunk.css.map",
+  "static/css/main.78a17ef2.chunk.css.map": "/map-labeller/static/css/main.78a17ef2.chunk.css.map",
   "index.html": "/map-labeller/index.html",
-  "precache-manifest.4717700e59d2f994f6021618d1d46c1d.js": "/map-labeller/precache-manifest.4717700e59d2f994f6021618d1d46c1d.js",
+  "precache-manifest.c20ace60e81a29f19c3c03098a40c408.js": "/map-labeller/precache-manifest.c20ace60e81a29f19c3c03098a40c408.js",
   "service-worker.js": "/map-labeller/service-worker.js"
 }
