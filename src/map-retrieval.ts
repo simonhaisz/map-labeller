@@ -10,7 +10,7 @@ const retrieveMap = (name: string, useTemplate: boolean = false): Promise<IMap> 
         fetch(publicUrl)
             .then(r => r.json())
             .then(mapData => {
-                fetch(`/data/${name}-image.png`)
+                fetch(`data/${name}-image.png`)
                     .then(r => r.arrayBuffer())
                     .then(buffer => {
                         const imageData = toBase64(buffer);
