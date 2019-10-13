@@ -90,7 +90,7 @@ class MapComponent extends Component<Props, State> {
                 left: x,
                 behavior: "smooth"
             }
-            scrollTo(options);
+            window.scrollTo(options);
         }
     }
 
