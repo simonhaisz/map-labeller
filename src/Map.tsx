@@ -54,8 +54,8 @@ class MapComponent extends Component<Props, State> {
         if (search.length === 0) {
             matches = [];
         } else {
-            matches = this.state.regions.
-                filter(r => r.name.toLowerCase().includes(search))
+            matches = this.state.regions
+                .filter(r => r.name.toLowerCase().includes(search))
                 .map(r => r.name);
         }
         const regions = [...this.state.regions];
